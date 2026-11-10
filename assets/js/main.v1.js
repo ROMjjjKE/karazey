@@ -85,10 +85,9 @@
 
       var liters = state.area * state.layers / 7.5;
       var primer = state.area * 0.1;
-      var cans = Math.ceil(liters / 2.5) * 2.5;
 
       outPaint.textContent = fmt(Math.round(liters * 10) / 10);
-      outCans.textContent = bank(Math.ceil(cans));
+      outCans.textContent = bank(Math.ceil(liters));
       outPrimer.textContent = fmt(Math.round(primer * 10) / 10);
       outTools.textContent = state.area > 45 ? '2 + 2' : '1 + 1';
     }
